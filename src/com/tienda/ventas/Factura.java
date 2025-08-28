@@ -6,14 +6,15 @@ package com.tienda.ventas;
 // - Posible división por cero si la lista está vacía.
 
 import com.tienda.productos.Producto;
-// falta: import java.util.List;
-// falta: import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Factura {
     private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
 
     public void agregarProducto(Producto p) {
         // BUG: no validar nulos (causa NullPointer más tarde)
+
         productos.add(p);
     }
 

@@ -1,15 +1,16 @@
 package com.tienda.productos;
 
-// Falta import de la excepción personalizada (pista)
+
 import com.tienda.excepciones.PrecioInvalidoException;
+import java.util.Objects;
 
 public class Producto {
     private String nombre;
     private double precio;
 
     public Producto(String nombre, double precio) throws PrecioInvalidoException {
-        this.nombre = nombre;
-        setPrecio(precio); // delega validación
+        setNombre(nombre);
+        setPrecio(precio);
     }
 
     public String getNombre() {
@@ -22,6 +23,11 @@ public class Producto {
 
     // BUG: no valida nulos o vacíos en nombre (pista de mejora)
     public void setNombre(String nombre) {
+
+        if (nombre == null || nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre no puede ser nulo o vacío");
+        }
+
         this.nombre = nombre;
     }
 
@@ -38,4 +44,15 @@ public class Producto {
     public String toString() {
         return nombre + " (" + precio + "€)";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Producto)) return false;
+        Producto p = (Producto) o;
+        return Double.compare(p.precio, precio) == 0 && nombre.equals(p.nombre);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(nombre, precio); }
 }
