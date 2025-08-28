@@ -4,7 +4,7 @@ package com.tienda.ventas;
 // - Falta importar List y ArrayList (compila mal).
 // - Usa Producto sin importar el paquete.
 // - Posible división por cero si la lista está vacía.
-
+import java.util.List;
 import com.tienda.productos.Producto;
 // falta: import java.util.List;
 // falta: import java.util.ArrayList;
