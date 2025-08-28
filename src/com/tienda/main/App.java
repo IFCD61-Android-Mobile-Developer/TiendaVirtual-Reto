@@ -1,6 +1,6 @@
 package com.tienda.main;
 
-
+//esto es una prueba
 
 import java.util.Scanner;
 import com.tienda.productos.Producto;
