@@ -9,4 +9,4 @@
 * [x] Acceso inseguro a `args[0]` sin validar longitud.
 * [x] División por cero en `Calculadora.dividir` si `b == 0`.
 * [x] Import innecesario en `App` *(higiene de código)*.
-* [ ] Validaciones de dominio: `Producto.setNombre` debería validar nulos/vacíos.
+* [x] Validaciones de dominio: `Producto.setNombre` debería validar nulos/vacíos.

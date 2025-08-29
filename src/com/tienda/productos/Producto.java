@@ -21,7 +21,6 @@ public class Producto {
         return precio;
     }
 
-    // BUG: no valida nulos o vacíos en nombre (pista de mejora)
     public void setNombre(String nombre) {
 
         if (nombre == null || nombre.isBlank()) {
@@ -31,10 +30,8 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    // BUG: acepta precios negativos sin lanzar excepción (pista)
     public void setPrecio(double precio) throws PrecioInvalidoException {
         if (precio < 0) {
-            // pista: lanzar excepción personalizada
             throw new PrecioInvalidoException("Precio no puede ser negativo: " + precio);
         }
         this.precio = precio;
