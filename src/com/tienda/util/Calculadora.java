@@ -1,8 +1,8 @@
 package com.tienda.util;
 
 // BUGS:
-// - Se lanza RaizNegativaException pero no se declara en el método.
-// - Falta import de la excepción.
+// - Se lanza RaizNegativaException pero no se declara en el método. HECHO
+// - Falta import de la excepción. HECHO
 
 import com.tienda.excepciones.RaizNegativaException;
 
@@ -13,7 +13,7 @@ public class Calculadora {
         return a / b;
     }
 
-    public double raizCuadrada(double x) /* falta throws RaizNegativaException */ {
+    public double raizCuadrada(double x) throws RaizNegativaException {
         if (x < 0) {
             throw new RaizNegativaException("No se permite raíz de número negativo: " + x);
         }
