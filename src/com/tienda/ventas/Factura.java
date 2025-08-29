@@ -5,9 +5,9 @@ package com.tienda.ventas;
 // - Usa Producto sin importar el paquete.
 // - Posible división por cero si la lista está vacía.
 import java.util.List;
+import java.util.ArrayList;
 import com.tienda.productos.Producto;
-// falta: import java.util.List;
-// falta: import java.util.ArrayList;
+
 
 public class Factura {
     private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
