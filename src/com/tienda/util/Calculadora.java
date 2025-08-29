@@ -11,7 +11,7 @@ public class Calculadora {
     public int dividir(int a, int b) {
         // BUG: no validar b == 0 (ArithmeticException)
         if(b == 0){
-            throw ArithmeticException("División por cero no permitida");
+            throw new ArithmeticException("División por cero no permitida");
         }
         return a / b;
     }
