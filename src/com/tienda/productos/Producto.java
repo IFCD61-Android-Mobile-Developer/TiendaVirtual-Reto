@@ -21,7 +21,6 @@ public class Producto {
         return precio;
     }
 
-    // BUG: no valida nulos o vacíos en nombre (pista de mejora)
     public void setNombre(String nombre) {
 
         if (nombre == null || nombre.isBlank()) {
