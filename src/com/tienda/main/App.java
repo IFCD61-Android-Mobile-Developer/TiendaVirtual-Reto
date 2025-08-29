@@ -14,7 +14,11 @@ public class App {
         Calculadora calc = new Calculadora();
 
 
-        System.out.println("Primer argumento: " + args[0]);
+        if (args.length > 0) {
+            System.out.println("Primer argumento: " + args[0]);
+        } else {
+            System.out.println("No se proporcionaron argumentos de línea de comandos.");
+        }
 
         try {
 
