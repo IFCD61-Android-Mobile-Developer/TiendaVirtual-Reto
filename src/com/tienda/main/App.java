@@ -2,7 +2,7 @@ package com.tienda.main;
 
 
 
-import java.util.Scanner;
+//import java.util.Scanner; (No se usa)
 import com.tienda.productos.Producto;
 import com.tienda.ventas.Factura;
 import com.tienda.util.Calculadora;
