@@ -1,6 +1,7 @@
 package com.tienda.main;
 
-import java.util.Scanner;
+
+import com.tienda.excepciones.RaizNegativaException;
 import com.tienda.productos.Producto;
 import com.tienda.ventas.Factura;
 import com.tienda.util.Calculadora;

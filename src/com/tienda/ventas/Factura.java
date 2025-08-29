@@ -34,7 +34,7 @@ public class Factura {
             throw new IllegalStateException("No hay productos para calcular promedios");
         }
 
-        return calcularTotal() / productos.size();
+        return (int) (calcularTotal() / productos.size());
     }
 
     public java.util.List<Producto> getProductos() {
