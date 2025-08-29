@@ -13,7 +13,10 @@ public class Factura {
     private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
 
     public void agregarProducto(Producto p) {
-        // BUG: no validar nulos (causa NullPointer más tarde)
+        // Comprobación y excepción para evitar agregar un producto nulo.
+        if (p == null) {
+            throw new IllegalArgumentException("No se puede agregar un producto nulo.");
+        }
         productos.add(p);
     }
 
