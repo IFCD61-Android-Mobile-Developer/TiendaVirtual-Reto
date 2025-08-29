@@ -24,7 +24,7 @@ public class Factura {
     }
 
     public int calcularPromedioEntero() {
-        if(productos.size() == 0){
+        if(productos.isEmpty()){
             return 0;
         }
         double total = calcularTotal();

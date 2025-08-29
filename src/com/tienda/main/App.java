@@ -1,5 +1,6 @@
 package com.tienda.main;
 
+import com.tienda.excepciones.RaizNegativaException;
 import com.tienda.productos.Producto;
 import com.tienda.ventas.Factura;
 import com.tienda.util.Calculadora;
@@ -44,6 +45,7 @@ public class App {
         } catch (RaizNegativaException e) {
             System.out.println("Error al calcular la raíz cuadrada: " + e.getMessage());
         }
+
     }
 }
 
