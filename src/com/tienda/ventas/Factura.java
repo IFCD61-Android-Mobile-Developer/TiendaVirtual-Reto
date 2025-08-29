@@ -2,7 +2,7 @@ package com.tienda.ventas;
 
 // BUGS:
 // - Falta importar List y ArrayList (compila mal). HECHO
-// - Usa Producto sin importar el paquete.
+// - Usa Producto sin importar el paquete. HECHO
 // - Posible división por cero si la lista está vacía.
 
 import com.tienda.productos.Producto;
