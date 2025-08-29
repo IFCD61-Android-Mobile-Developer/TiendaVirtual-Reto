@@ -35,14 +35,22 @@ public class App {
             System.out.println("Precio inválido: " + e.getMessage());
         }
 
-
-        factura.agregarProducto(null);
+        // Evitar error al poner un producto null
+        try {
+            factura.agregarProducto(null);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error al agregar producto: " + e.getMessage());
+        }
 
         System.out.println("Total: " + factura.calcularTotal());
         System.out.println("Promedio entero: " + factura.calcularPromedioEntero());
 
-
-        System.out.println("√(-9) = " + calc.raizCuadrada(-9));
+        // Evitar error al poner un número negativo
+        try {
+            System.out.println("√(-9) = " + calc.raizCuadrada(-9));
+        } catch (com.tienda.excepciones.RaizNegativaException e) {
+            System.out.println("Error al calcular raíz cuadrada: " + e.getMessage());
+        }
     }
 }
 
