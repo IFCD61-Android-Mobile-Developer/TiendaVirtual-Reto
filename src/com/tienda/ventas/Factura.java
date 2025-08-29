@@ -1,8 +1,5 @@
 package com.tienda.ventas;
 
-// BUGS:
-// - Usa Producto sin importar el paquete.
-
 import com.tienda.productos.Producto;
 import java.util.List;
 import java.util.ArrayList;
@@ -11,8 +8,11 @@ public class Factura {
     private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
 
     public void agregarProducto(Producto p) {
-        // BUG: no validar nulos (causa NullPointer más tarde)
-        productos.add(p);
+        if(p != null){
+            productos.add(p);
+        } else {
+            System.out.println("El producto no puede ser null");
+        }
     }
 
     public double calcularTotal() {
