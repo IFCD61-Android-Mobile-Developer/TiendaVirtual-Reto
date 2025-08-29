@@ -1,7 +1,7 @@
 package com.tienda.ventas;
 
 // BUGS:
-// - Falta importar List y ArrayList (compila mal).
+// - Falta importar List y ArrayList (compila mal). HECHO
 // - Usa Producto sin importar el paquete.
 // - Posible división por cero si la lista está vacía.
 
@@ -26,8 +26,11 @@ public class Factura {
     }
 
     public int calcularPromedioEntero() {
-        // BUG: división por cero si no hay productos
         double total = calcularTotal();
+        // Si no hay producto se obtiene un valor de 0.
+        if (productos.isEmpty()) {
+            return 0;
+        }
         return (int) (total / productos.size());
     }
 

@@ -1,7 +1,7 @@
 # Lista de BUGS (pistas para equipos)
 
 * [x] Imports faltantes en `Factura` (`List`, `ArrayList`).
-* [ ] División por cero en `Factura.calcularPromedioEntero()` si la lista está vacía.
+* [x] División por cero en `Factura.calcularPromedioEntero()` si la lista está vacía.
 * [ ] Posible `NullPointerException` por permitir `null` en `agregarProducto`.
 * [ ] Precio negativo debe lanzar `PrecioInvalidoException`.
 * [ ] `Calculadora.raizCuadrada` lanza `RaizNegativaException` pero no declara `throws` si se define como *checked*.
