@@ -20,8 +20,7 @@ public class App {
 
 
         try {
-
-            System.out.println("5 / 1 = " + calc.dividir(5, 1));
+            System.out.println("5 / 0 = " + calc.dividir(5, 0));
         } catch (ArithmeticException ex) {
             System.out.println("Ocurrió un error en división: " + ex.getMessage());
         }
