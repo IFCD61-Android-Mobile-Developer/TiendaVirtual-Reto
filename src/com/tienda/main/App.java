@@ -36,7 +36,11 @@ public class App {
         System.out.println("Promedio entero: " + factura.calcularPromedioEntero());
 
 
-        System.out.println("√(-9) = " + calc.raizCuadrada(-9));
+        try {
+            System.out.println("√(-9) = " + calc.raizCuadrada(-9));
+        } catch (RaizNegativaException e) {
+            System.out.println("Error al calcular la raíz cuadrada: " + e.getMessage());
+        }
     }
 }
 
