@@ -21,14 +21,14 @@ public class Producto {
         return precio;
     }
 
-    // BUG: no valida nulos o vacíos en nombre (pista de mejora)
-    public void setNombre(String nombre) {
 
+    public void setNombre(String nombre) {
+    // BUG: no valida nulos o vacíos en nombre (pista de mejora)
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre no puede ser nulo o vacío");
         }
 
-        this.nombre = nombre;
+        this.nombre = nombre.trim();
     }
 
     // BUG: acepta precios negativos sin lanzar excepción (pista)
