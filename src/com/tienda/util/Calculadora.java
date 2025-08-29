@@ -8,8 +8,10 @@ import com.tienda.excepciones.RaizNegativaException;
 
 public class Calculadora {
 
-    public int dividir(int a, int b) {
-        // BUG: no validar b == 0 (ArithmeticException)
+    public int dividir(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("No se permite división por cero");
+        }
         return a / b;
     }
 

@@ -7,6 +7,6 @@
 * [x] `Calculadora.raizCuadrada` lanza `RaizNegativaException` pero no declara `throws` si se define como *checked*.
 * [x] `RaizNegativaException`: ¿debe ser *checked* (`extends Exception`) o *unchecked* (`RuntimeException`)? *(discusión de diseño)*.
 * [x] Acceso inseguro a `args[0]` sin validar longitud.
-* [ ] División por cero en `Calculadora.dividir` si `b == 0`.
+* [x] División por cero en `Calculadora.dividir` si `b == 0`.
 * [ ] Import innecesario en `App` *(higiene de código)*.
 * [ ] Validaciones de dominio: `Producto.setNombre` debería validar nulos/vacíos.
