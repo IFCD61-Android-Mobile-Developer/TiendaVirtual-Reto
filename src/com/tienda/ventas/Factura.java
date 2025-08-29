@@ -2,7 +2,6 @@ package com.tienda.ventas;
 
 // BUGS:
 // - Usa Producto sin importar el paquete.
-// - Posible división por cero si la lista está vacía.
 
 import com.tienda.productos.Producto;
 import java.util.List;
@@ -25,7 +24,9 @@ public class Factura {
     }
 
     public int calcularPromedioEntero() {
-        // BUG: división por cero si no hay productos
+        if(productos.size() == 0){
+            return 0;
+        }
         double total = calcularTotal();
         return (int) (total / productos.size());
     }
