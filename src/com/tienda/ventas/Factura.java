@@ -1,21 +1,21 @@
 package com.tienda.ventas;
 
 // BUGS:
-// - Falta importar List y ArrayList (compila mal).
-// - Usa Producto sin importar el paquete.
-// - Posible división por cero si la lista está vacía.
+// - Falta importar List y ArrayList (compila mal). Check
+// - Usa Producto sin importar el paquete. Check
+// - Posible división por cero si la lista está vacía. Check
 
 
-// to do
+
 import com.tienda.productos.Producto;
-// falta: import java.util.List;
-// falta: import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Factura {
-    private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
+    private List<Producto> productos = new ArrayList<>();
 
     public void agregarProducto(Producto p) {
-        // BUG: no validar nulos (causa NullPointer más tarde)
+        if (p != null) {
         productos.add(p);
     }
 
@@ -28,7 +28,9 @@ public class Factura {
     }
 
     public int calcularPromedioEntero() {
-        // BUG: división por cero si no hay productos
+            if (productos.size() == 0) {
+                return 0; // Evita la división por cero
+            }
         double total = calcularTotal();
         return (int) (total / productos.size());
     }
