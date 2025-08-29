@@ -1,7 +1,5 @@
 package com.tienda.main;
 
-//esto es una pruebas
-
 import java.util.Scanner;
 import com.tienda.productos.Producto;
 import com.tienda.ventas.Factura;

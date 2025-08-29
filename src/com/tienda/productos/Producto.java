@@ -31,10 +31,9 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    // BUG: acepta precios negativos sin lanzar excepción (pista)
+
     public void setPrecio(double precio) throws PrecioInvalidoException {
         if (precio < 0) {
-            // pista: lanzar excepción personalizada
             throw new PrecioInvalidoException("Precio no puede ser negativo: " + precio);
         }
         this.precio = precio;
