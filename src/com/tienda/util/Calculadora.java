@@ -1,8 +1,5 @@
 package com.tienda.util;
 
-// BUGS:
-// - Falta import de la excepción.
-
 import com.tienda.excepciones.RaizNegativaException;
 
 public class Calculadora {

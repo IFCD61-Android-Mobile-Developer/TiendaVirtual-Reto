@@ -11,8 +11,12 @@ public class App {
         Factura factura = new Factura();
         Calculadora calc = new Calculadora();
 
+        if (args.length > 0){
+            System.out.println("Primer argumento: " + args[0]);
+        } else {
+            System.out.println("Error: No se proporcionaron argumentos.");
+        }
 
-        System.out.println("Primer argumento: " + args[0]);
 
         try {
 
