@@ -10,10 +10,13 @@ import com.tienda.productos.Producto;
 
 
 public class Factura {
-    private java.util.List<Producto> productos = new java.util.ArrayList<>(); // parche temporal
+    private java.util.List<Producto> productos = new java.util.ArrayList<>();
 
     public void agregarProducto(Producto p) {
         // BUG: no validar nulos (causa NullPointer más tarde)
+        if(p == null){
+            throw new IllegalArgumentException("No se pueden agregar productos nulos");
+        }
         productos.add(p);
     }
 
@@ -27,11 +30,14 @@ public class Factura {
 
     public int calcularPromedioEntero() {
         // BUG: división por cero si no hay productos
-        double total = calcularTotal();
-        return (int) (total / productos.size());
+        if(productos.isEmpty()){
+            throw new IllegalStateException("No hay productos para calcular promedios");
+        }
+
+        return calcularTotal() / productos.size();
     }
 
     public java.util.List<Producto> getProductos() {
-        return productos;
+        return new ArrayList<>(productos);
     }
 }
